@@ -39,6 +39,7 @@ public class ArrayOperation {
 
     // adding elements of array to arrayList.
     Collections.addAll(al, input);
+    Collections.sort(al);
 
     sumOfTwoArray(input);
     sumOfTwoArrayList(al);

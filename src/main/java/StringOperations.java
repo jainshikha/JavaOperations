@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class StringOperations {
@@ -36,7 +33,7 @@ public class StringOperations {
     int initSize = (int) Math.ceil(100 / 0.75);
     System.out.println("initial hashmap size " + initSize);
 
-    //List operation
+    // List operation
     List<Map<List<Integer>, List<String>>> opl = new ArrayList<>();
     Map<List<Integer>, List<String>> opmm = new HashMap<>();
     opl.add(null);
@@ -45,12 +42,13 @@ public class StringOperations {
 
     opl.forEach(e -> System.out.println(e + " "));
 
-    //stream operation
+    // stream operation
     System.out.println("***************");
     System.out.println(
         Stream.of("green", "yellow", "blue")
             .max((s1, s2) -> s1.compareTo(s2))
             .filter(s -> s.endsWith("n"))
             .orElse("yellow"));
+    List<String> listDummy = Arrays.asList("Coding", "is", "fun");
   }
 }
